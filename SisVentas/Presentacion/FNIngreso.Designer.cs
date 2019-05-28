@@ -56,6 +56,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.dtListadoDetalle = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.txtIdArticulo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -73,6 +76,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnBuscarPro = new System.Windows.Forms.Button();
             this.txtIGV = new System.Windows.Forms.TextBox();
             this.textCorrelativo = new System.Windows.Forms.TextBox();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
@@ -81,10 +85,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnBuscarArticulo = new System.Windows.Forms.Button();
-            this.btnBuscarPro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListado)).BeginInit();
@@ -222,6 +222,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dtFechaFin);
             this.tabPage1.Controls.Add(this.dtFechInicio);
             this.tabPage1.Controls.Add(this.dtgListado);
@@ -234,7 +235,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(996, 667);
+            this.tabPage1.Size = new System.Drawing.Size(1020, 724);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -292,10 +293,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 100);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1004, 693);
+            this.tabControl1.Size = new System.Drawing.Size(1028, 750);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage2
@@ -392,6 +394,36 @@
             this.groupBox2.Size = new System.Drawing.Size(808, 161);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Image = global::Presentacion.Properties.Resources.Remove;
+            this.btnQuitar.Location = new System.Drawing.Point(740, 90);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(62, 23);
+            this.btnQuitar.TabIndex = 9;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::Presentacion.Properties.Resources.agregar_p;
+            this.btnAgregar.Location = new System.Drawing.Point(740, 62);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(62, 23);
+            this.btnAgregar.TabIndex = 9;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnBuscarArticulo
+            // 
+            this.btnBuscarArticulo.Image = global::Presentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(222, 59);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(52, 26);
+            this.btnBuscarArticulo.TabIndex = 9;
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
             // 
             // txtIdArticulo
             // 
@@ -538,6 +570,16 @@
             this.label11.TabIndex = 10;
             this.label11.Text = "IGV";
             // 
+            // btnBuscarPro
+            // 
+            this.btnBuscarPro.Image = global::Presentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarPro.Location = new System.Drawing.Point(418, 68);
+            this.btnBuscarPro.Name = "btnBuscarPro";
+            this.btnBuscarPro.Size = new System.Drawing.Size(50, 24);
+            this.btnBuscarPro.TabIndex = 9;
+            this.btnBuscarPro.UseVisualStyleBackColor = true;
+            this.btnBuscarPro.Click += new System.EventHandler(this.btnBuscarPro_Click);
+            // 
             // txtIGV
             // 
             this.txtIGV.Location = new System.Drawing.Point(569, 100);
@@ -587,51 +629,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 43);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(175, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Ingresos Almacen";
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Image = global::Presentacion.Properties.Resources.Remove;
-            this.btnQuitar.Location = new System.Drawing.Point(740, 90);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(62, 23);
-            this.btnQuitar.TabIndex = 9;
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::Presentacion.Properties.Resources.agregar_p;
-            this.btnAgregar.Location = new System.Drawing.Point(740, 62);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(62, 23);
-            this.btnAgregar.TabIndex = 9;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnBuscarArticulo
-            // 
-            this.btnBuscarArticulo.Image = global::Presentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(222, 59);
-            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(52, 26);
-            this.btnBuscarArticulo.TabIndex = 9;
-            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
-            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
-            // 
-            // btnBuscarPro
-            // 
-            this.btnBuscarPro.Image = global::Presentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarPro.Location = new System.Drawing.Point(418, 68);
-            this.btnBuscarPro.Name = "btnBuscarPro";
-            this.btnBuscarPro.Size = new System.Drawing.Size(50, 24);
-            this.btnBuscarPro.TabIndex = 9;
-            this.btnBuscarPro.UseVisualStyleBackColor = true;
-            this.btnBuscarPro.Click += new System.EventHandler(this.btnBuscarPro_Click);
             // 
             // FNIngreso
             // 
@@ -639,7 +642,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 750);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
             this.Name = "FNIngreso";
             this.Text = "FNIngreso";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FNIngreso_FormClosing);
@@ -656,7 +658,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

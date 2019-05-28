@@ -39,7 +39,6 @@
             this.btnBuscasCat = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.pxImagen = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -67,31 +66,34 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pxImagen = new System.Windows.Forms.PictureBox();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 33);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 4;
             this.label1.Text = "Articulos";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(756, 484);
+            this.tabPage2.Size = new System.Drawing.Size(878, 632);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -124,7 +126,6 @@
             this.groupBox1.Size = new System.Drawing.Size(712, 343);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Articulos";
             // 
             // cbIdpresentacion
             // 
@@ -181,17 +182,6 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // pxImagen
-            // 
-            this.pxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pxImagen.BackgroundImage")));
-            this.pxImagen.Image = global::Presentacion.Properties.Resources._52254;
-            this.pxImagen.Location = new System.Drawing.Point(462, 157);
-            this.pxImagen.Name = "pxImagen";
-            this.pxImagen.Size = new System.Drawing.Size(100, 112);
-            this.pxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pxImagen.TabIndex = 7;
-            this.pxImagen.TabStop = false;
             // 
             // btnCancelar
             // 
@@ -365,6 +355,7 @@
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "&Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEliminar
             // 
@@ -429,33 +420,44 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 90);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(764, 510);
+            this.tabControl1.Size = new System.Drawing.Size(886, 658);
             this.tabControl1.TabIndex = 5;
+            // 
+            // pxImagen
+            // 
+            this.pxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pxImagen.BackgroundImage")));
+            this.pxImagen.Image = global::Presentacion.Properties.Resources._52254;
+            this.pxImagen.Location = new System.Drawing.Point(462, 157);
+            this.pxImagen.Name = "pxImagen";
+            this.pxImagen.Size = new System.Drawing.Size(100, 112);
+            this.pxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pxImagen.TabIndex = 7;
+            this.pxImagen.TabStop = false;
             // 
             // FNArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 658);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FNArticulo";
             this.Text = "FNArticulo";
             this.Load += new System.EventHandler(this.FNArticulo_Load);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

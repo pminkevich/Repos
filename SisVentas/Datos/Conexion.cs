@@ -8,8 +8,8 @@ namespace Datos
 {
     class Conexion
     {
-        
-     public static string Cn = "server=(localdb)\\MSSQLLocalDB; database=dbventas; integrated security=true";
+
+        public static string Cn = Properties.Settings.Default.cn;
        
     }
 }

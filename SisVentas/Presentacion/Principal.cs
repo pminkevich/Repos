@@ -261,7 +261,28 @@ namespace Presentacion
 
         private void ventasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FNVenta Form = FNVenta.GetInstancia();
+            Form.MdiParent = this;
+            Form.WindowState = FormWindowState.Maximized;
+            Form.Show();
+            Form.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            
+        }
 
+        private void stockDeArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.FNConsultaStockA Form = new Consultas.FNConsultaStockA();
+            Form.MdiParent = this;
+            Form.Show();
+        }
+
+        private void comprasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FNIngreso Form = FNIngreso.GetInstancia();
+            Form.MdiParent = this;
+            Form.WindowState = FormWindowState.Maximized;
+            Form.Show();
+            Form.IdTrabajador = Convert.ToInt32(this.Idtrabajador);
         }
     }
 }

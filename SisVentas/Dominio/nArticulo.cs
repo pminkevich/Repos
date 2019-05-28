@@ -52,6 +52,11 @@ namespace Dominio
         {
             return new DArticulo().Mostrar();
         }
+        //mostrar stock articulos
+        public static DataTable Stock_Articulos()
+        {
+            return new DArticulo().Stock_Articulos();
+        }
         //Buscar por nombre de Articulo
         public static DataTable BuscarNombre(string pTextoaBuscar)
         {

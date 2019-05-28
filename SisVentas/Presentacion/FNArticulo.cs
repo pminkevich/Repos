@@ -358,5 +358,12 @@ namespace Presentacion
             form.ShowDialog();
 
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FNReporteArt Reporte = new FNReporteArt();
+            Reporte.ShowDialog();
+
+        }
     }
 }

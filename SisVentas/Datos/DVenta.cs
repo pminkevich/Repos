@@ -71,7 +71,7 @@ namespace Datos
                 SqlParameter parIddetalleingreso = new SqlParameter();
                 parIddetalleingreso.ParameterName = "@iddetalle_ingreso";
                 parIddetalleingreso.SqlDbType = SqlDbType.Int;
-                parIddetalleingreso.Value = parIddetalleingreso;
+                parIddetalleingreso.Value = pIddetalle_ingreso;
                 comando.Parameters.Add(parIddetalleingreso);
 
                 SqlParameter parCantidad = new SqlParameter();
@@ -179,6 +179,7 @@ namespace Datos
                 {
                     //obtengo el idingreso del ingreso realizado
                     this.Idventa = Convert.ToInt32(comando.Parameters["@idventa"].Value);
+                    
 
                     foreach (DDetalle_Venta Det in Detalle)
                     {

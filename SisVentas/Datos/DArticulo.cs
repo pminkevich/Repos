@@ -306,6 +306,35 @@ namespace Datos
 
             return Muestradt;
         }
+        public DataTable Stock_Articulos()
+        {
+            DataTable Muestradt = new DataTable("Stock_Articulos");
+            SqlConnection conexion = new SqlConnection();
+            try
+            {
+                conexion.ConnectionString = Conexion.Cn;
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = conexion;
+                cmd.CommandText = "spstock_articulos";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+
+                ad.Fill(Muestradt);
+
+
+
+            }
+            catch (Exception Ex)
+            {
+                Muestradt = null;
+
+            }
+
+            return Muestradt;
+
+        }
+
         #endregion
     }
 

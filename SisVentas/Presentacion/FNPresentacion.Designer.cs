@@ -75,6 +75,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dtgListado);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.chEliminar);
             this.tabPage1.Controls.Add(this.btnImprimir);
@@ -85,7 +86,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(644, 390);
+            this.tabPage1.Size = new System.Drawing.Size(792, 502);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -295,10 +296,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 68);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(652, 416);
+            this.tabControl1.Size = new System.Drawing.Size(800, 528);
             this.tabControl1.TabIndex = 3;
             // 
             // errorIcono
@@ -308,9 +310,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 11);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.Size = new System.Drawing.Size(149, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Presentaciones";
             // 
@@ -320,7 +323,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
             this.Name = "FNPresentacion";
             this.Text = "FNPresentacion";
             this.Load += new System.EventHandler(this.FNPresentacion_Load);
@@ -333,7 +335,6 @@
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
