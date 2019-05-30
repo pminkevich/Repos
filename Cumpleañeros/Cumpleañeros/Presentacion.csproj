@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B9F1388-4ECA-44CF-A266-1DB58DC7D8B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cumpleañeros</RootNamespace>
+    <AssemblyName>Cumpleañeros</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cumpleañeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cumpleañeros.Designer.cs">
+      <DependentUpon>Cumpleañeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAreas.Designer.cs">
+      <DependentUpon>FAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCargo.Designer.cs">
+      <DependentUpon>FCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NArea.Designer.cs">
+      <DependentUpon>NArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NCargo.Designer.cs">
+      <DependentUpon>NCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NCumpleañero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NCumpleañero.Designer.cs">
+      <DependentUpon>NCumpleañero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cumpleañeros.resx">
+      <DependentUpon>Cumpleañeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAreas.resx">
+      <DependentUpon>FAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCargo.resx">
+      <DependentUpon>FCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NArea.resx">
+      <DependentUpon>NArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NCargo.resx">
+      <DependentUpon>NCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NCumpleañero.resx">
+      <DependentUpon>NCumpleañero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\cancel.png" />
+    <Content Include="Imagenes\Close.png" />
+    <Content Include="Imagenes\left-arrow %281%29.png" />
+    <Content Include="Imagenes\loupe %281%29.png" />
+    <Content Include="Imagenes\maximize3.png" />
+    <Content Include="Imagenes\menu.png" />
+    <Content Include="Imagenes\menu2.png" />
+    <Content Include="Imagenes\Minimize.png" />
+    <Content Include="Imagenes\Normal.png" />
+    <None Include="Resources\Normal1.png" />
+    <None Include="Resources\Minimize.png" />
+    <None Include="Resources\maximize31.png" />
+    <None Include="Resources\maximize3.png" />
+    <None Include="Resources\Normal.png" />
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{aeba67ce-30f4-40af-b9f9-61d250c853a2}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
