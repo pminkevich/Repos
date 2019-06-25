@@ -161,10 +161,12 @@ namespace Cumpleañeros
         private void LlenarComboC()
         {
 
-
+            cbCargo.BeginUpdate();
+            cbCargo.Text = "";
             cbCargo.DisplayMember = "Nombre";
             cbCargo.ValueMember = "Idcargo";
             cbCargo.DataSource = nCargo.LlenarCombo(Convert.ToInt32(cbArea.SelectedValue));
+            cbCargo.EndUpdate();
             //cbCargo.ValueMember = "Idcargo";
             //cbCargo.DisplayMember = "Nombre";
         }
@@ -214,7 +216,7 @@ namespace Cumpleañeros
 
                             Empleado = new nEmpleado(Convert.ToInt32(cbCargo.SelectedValue), Convert.ToInt32(cbArea.SelectedValue), txtNombre.Text.Trim().ToUpper(),
                                                         txtApellido.Text.Trim().ToUpper(),
-                                                        txtEmail.Text, dtFecha.Value,
+                                                        txtEmail.Text,dtFechai.Value, dtFecha.Value,
                                                         Imagen);
                             rpta = Empleado.Insertar();
 
@@ -342,6 +344,8 @@ namespace Cumpleañeros
                 txtNombre.Text = dtgListado.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtApellido.Text = dtgListado.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtEmail.Text= dtgListado.CurrentRow.Cells["Email"].Value.ToString();
+                dtFechai.Value = Convert.ToDateTime(dtgListado.CurrentRow.Cells["Fecha_ingreso"].Value);
+                dtFecha.Value = Convert.ToDateTime(dtgListado.CurrentRow.Cells["Fecha_nacimiento"].Value);
 
                 byte[] Imagenbd = (Byte[])dtgListado.CurrentRow.Cells["Foto"].Value;
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(Imagenbd);
@@ -363,7 +367,10 @@ namespace Cumpleañeros
         {
             Limpiar();
             btnGuardarE.Visible = false;
+            
             btnNuevo.Visible = false;
+            Isnuevo = true;
+            
         }
 
         private void btnGuardarE_Click(object sender, EventArgs e)
@@ -385,7 +392,7 @@ namespace Cumpleañeros
 
                             Empleado = new nEmpleado(Convert.ToInt32(Idempleado),Convert.ToInt32(cbCargo.SelectedValue), Convert.ToInt32(cbArea.SelectedValue), txtNombre.Text.Trim().ToUpper(),
                                                         txtApellido.Text.Trim().ToUpper(),
-                                                        txtEmail.Text, dtFecha.Value,
+                                                        txtEmail.Text,dtFechai.Value, dtFecha.Value,
                                                         Imagen);
                             rpta = Empleado.Modificar();
 
@@ -419,6 +426,11 @@ namespace Cumpleañeros
             {
                 MensajeError(ex.Message);
             }
+
+        }
+
+        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -61,6 +61,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnGuardarE = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.dtFechai = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pImagen)).BeginInit();
@@ -112,7 +114,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 235);
+            this.label5.Location = new System.Drawing.Point(33, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 1;
@@ -121,7 +123,7 @@
             // btnGuardar
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(36, 264);
+            this.btnGuardar.Location = new System.Drawing.Point(36, 293);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(131, 31);
             this.btnGuardar.TabIndex = 2;
@@ -153,7 +155,7 @@
             // dtFecha
             // 
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(173, 235);
+            this.dtFecha.Location = new System.Drawing.Point(173, 263);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(100, 20);
             this.dtFecha.TabIndex = 4;
@@ -191,7 +193,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 222);
+            this.label6.Location = new System.Drawing.Point(30, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(265, 13);
             this.label6.TabIndex = 5;
@@ -205,6 +207,7 @@
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(183, 21);
             this.cbArea.TabIndex = 7;
+            this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
             this.cbArea.SelectionChangeCommitted += new System.EventHandler(this.cbArea_SelectionChangeCommitted);
             // 
             // cbCargo
@@ -291,7 +294,7 @@
             this.dtgListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
-            this.dtgListado.Location = new System.Drawing.Point(1, 341);
+            this.dtgListado.Location = new System.Drawing.Point(1, 366);
             this.dtgListado.Name = "dtgListado";
             this.dtgListado.ReadOnly = true;
             this.dtgListado.Size = new System.Drawing.Size(541, 178);
@@ -309,7 +312,7 @@
             // 
             this.button1.Enabled = false;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(173, 264);
+            this.button1.Location = new System.Drawing.Point(173, 293);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 31);
             this.button1.TabIndex = 2;
@@ -320,7 +323,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 318);
+            this.checkBox1.Location = new System.Drawing.Point(12, 343);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(62, 17);
             this.checkBox1.TabIndex = 11;
@@ -332,7 +335,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(214, 318);
+            this.label11.Location = new System.Drawing.Point(214, 343);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(328, 17);
             this.label11.TabIndex = 1;
@@ -341,7 +344,7 @@
             // btnGuardarE
             // 
             this.btnGuardarE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarE.Location = new System.Drawing.Point(36, 264);
+            this.btnGuardarE.Location = new System.Drawing.Point(35, 293);
             this.btnGuardarE.Name = "btnGuardarE";
             this.btnGuardarE.Size = new System.Drawing.Size(131, 31);
             this.btnGuardarE.TabIndex = 2;
@@ -353,7 +356,7 @@
             // btnNuevo
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(173, 264);
+            this.btnNuevo.Location = new System.Drawing.Point(173, 293);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(131, 31);
             this.btnNuevo.TabIndex = 2;
@@ -362,10 +365,29 @@
             this.btnNuevo.Visible = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // dtFechai
+            // 
+            this.dtFechai.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechai.Location = new System.Drawing.Point(173, 233);
+            this.dtFechai.Name = "dtFechai";
+            this.dtFechai.Size = new System.Drawing.Size(103, 20);
+            this.dtFechai.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(33, 233);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Fecha Ingreso";
+            // 
             // NCumpleañero
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(211)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(545, 531);
+            this.ClientSize = new System.Drawing.Size(545, 554);
+            this.Controls.Add(this.dtFechai);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dtgListado);
             this.Controls.Add(this.pImagen);
@@ -380,6 +402,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnNuevo);
@@ -439,5 +462,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardarE;
+        private System.Windows.Forms.DateTimePicker dtFechai;
+        private System.Windows.Forms.Label label12;
     }
 }

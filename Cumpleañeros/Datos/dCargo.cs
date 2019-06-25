@@ -230,7 +230,7 @@ namespace Datos
                 cmd.Parameters.Add(parIdarea);
 
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
-
+                
                 ad.Fill(Muestradt);
 
 

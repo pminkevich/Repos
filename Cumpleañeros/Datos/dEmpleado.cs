@@ -18,6 +18,7 @@ namespace Datos
         private string apellido;
         private string email;
         private DateTime fecha_nacimiento;
+        private DateTime fecha_ingreso;
         private byte[] imagen;
         private string textobuscar;
 
@@ -30,6 +31,7 @@ namespace Datos
         public byte[] Imagen { get => imagen; set => imagen = value; }
         public string Textobuscar { get => textobuscar; set => textobuscar = value; }
         public int Idarea { get => idarea; set => idarea = value; }
+        public DateTime Fecha_ingreso { get => fecha_ingreso; set => fecha_ingreso = value; }
         #endregion
         #region"Constructor"
         public dEmpleado()
@@ -93,8 +95,14 @@ namespace Datos
                 parEmail.Value = Empleado.Email;
                 cmd.Parameters.Add(parEmail);
 
+                SqlParameter parFechaI = new SqlParameter();
+                parFechaI.ParameterName = "@Fecha_ingreso";
+                parFechaI.SqlDbType = SqlDbType.Date;
+                parFechaI.Value = Empleado.Fecha_ingreso;
+                cmd.Parameters.Add(parFechaI);
+
                 SqlParameter parFecha = new SqlParameter();
-                parFecha.ParameterName = "@Fecha_nacimiento";
+                parFecha.ParameterName = "@Fecha_Nacimiento";
                 parFecha.SqlDbType = SqlDbType.Date;
                 parFecha.Value = Empleado.Fecha_nacimiento;
                 cmd.Parameters.Add(parFecha);
@@ -173,8 +181,15 @@ namespace Datos
                 parEmail.Value = Empleado.Email;
                 cmd.Parameters.Add(parEmail);
 
+                SqlParameter parFechaI = new SqlParameter();
+                parFechaI.ParameterName = "@Fecha_ingreso";
+                parFechaI.SqlDbType = SqlDbType.Date;
+                parFechaI.Value = Empleado.Fecha_ingreso;
+                cmd.Parameters.Add(parFechaI);
+
+
                 SqlParameter parFecha = new SqlParameter();
-                parFecha.ParameterName = "@Fecha_nacimiento";
+                parFecha.ParameterName = "@Fecha_Nacimiento";
                 parFecha.SqlDbType = SqlDbType.Date;
                 parFecha.Value = Empleado.Fecha_nacimiento;
                 cmd.Parameters.Add(parFecha);

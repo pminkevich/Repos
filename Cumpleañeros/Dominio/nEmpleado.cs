@@ -15,7 +15,7 @@ namespace Dominio
 
         #region"Constructores"
         public nEmpleado(int pIdempleado,int pIdcargo,int pIdarea,string pNombre,string pApellido,
-                        string pEmail, DateTime pFecha, byte[] pImagen)
+                        string pEmail, DateTime pFechaI, DateTime pFecha, byte[] pImagen)
         {
             Empleado = new dEmpleado();
             Empleado.Idempleado = pIdempleado;
@@ -24,11 +24,12 @@ namespace Dominio
             Empleado.Nombre = pNombre;
             Empleado.Apellido = pApellido;
             Empleado.Email = pEmail;
+            Empleado.Fecha_ingreso = pFechaI;
             Empleado.Fecha_nacimiento = pFecha;
             Empleado.Imagen = pImagen;
         }
         public nEmpleado(int pIdcargo, int pIdarea, string pNombre, string pApellido,
-                        string pEmail, DateTime pFecha, byte[] pImagen)
+                        string pEmail,DateTime pFechaI, DateTime pFecha, byte[] pImagen)
         {
             Empleado = new dEmpleado();
             Empleado.Idcargo = pIdcargo;
@@ -36,6 +37,7 @@ namespace Dominio
             Empleado.Nombre = pNombre;
             Empleado.Apellido = pApellido;
             Empleado.Email = pEmail;
+            Empleado.Fecha_ingreso = pFechaI;
             Empleado.Fecha_nacimiento = pFecha;
             Empleado.Imagen = pImagen;
         }
