@@ -45,8 +45,10 @@ namespace TaskSap.Logica
             }
             return Valida;
         }
+        //Metodo para Grabar una nueva Tarea
         public string NTarea(object[] Textos, object Date)
         {
+
             string rpta = "";
             try
             {
