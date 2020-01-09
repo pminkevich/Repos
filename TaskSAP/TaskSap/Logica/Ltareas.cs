@@ -70,6 +70,7 @@ namespace TaskSap.Logica
                 }
                 return rpta;
             }
+            //cath para saber sobre error en Entity Framework
             catch (DbEntityValidationException ex)
             {
                 StringBuilder sb = new StringBuilder();
