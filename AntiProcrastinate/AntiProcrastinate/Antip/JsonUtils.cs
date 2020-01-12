@@ -56,7 +56,11 @@ public class Snippet
     public Thumbnails thumbnails { get; set; }
     public string channelTitle { get; set; }
     public string liveBroadcastContent { get; set; }
-}
+    public IList<string> tags { get; set; }
+    public string categoryId { get; set; }
+    public Localized localized { get; set; }
+    public string defaultAudioLanguage { get; set; }
+    }
 
 public class Item
 {
@@ -75,4 +79,47 @@ public class YouTubeAPI
     public PageInfo pageInfo { get; set; }
     public IList<Item> items { get; set; }
 }
+    public class Standard
+    {
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+    }
+
+    public class Maxres
+    {
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+    }
+    public class Localized
+    {
+        public string title { get; set; }
+        public string description { get; set; }
+    }
+
+    public class ContentDetails
+    {
+        public string duration { get; set; }
+        public string dimension { get; set; }
+        public string definition { get; set; }
+        public string caption { get; set; }
+        public bool licensedContent { get; set; }
+        public string projection { get; set; }
+    }
+    public class Item2
+    {
+        public string kind { get; set; }
+        public string etag { get; set; }
+        public string id { get; set; }
+        public ContentDetails contentDetails { get; set; }
+    }
+
+    public class YoutubeUser
+    {
+        public string kind { get; set; }
+        public string etag { get; set; }
+        public PageInfo pageInfo { get; set; }
+        public IList<Item2> items { get; set; }
+    }
 }

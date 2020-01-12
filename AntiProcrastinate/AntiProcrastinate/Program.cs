@@ -32,6 +32,7 @@ namespace AntiProcrastinate
         {
             ContextMenuStrip CMS = new ContextMenuStrip();
             CMS.Items.Add("Admin", null, new EventHandler(AdminLoad_Click));
+            CMS.Items.Add("User", null, new EventHandler(UserLoad_Click));
             return CMS;
 
         }
@@ -41,6 +42,12 @@ namespace AntiProcrastinate
             AdminForm AdminFRM = new AdminForm();
             AdminFRM.Show();
 
+        }
+        private static void UserLoad_Click(object sender, EventArgs e)
+        {
+            UserForm FrmUser = new UserForm();
+            FrmUser.Show();
+            
         }
     }
 }

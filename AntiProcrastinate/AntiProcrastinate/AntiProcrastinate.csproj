@@ -111,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\User.cs" />
+    <Compile Include="Windows\FormState.cs" />
+    <Compile Include="Windows\WinApi.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,9 +157,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Imagenes\Logo.png" />
   </ItemGroup>

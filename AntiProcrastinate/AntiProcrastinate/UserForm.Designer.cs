@@ -44,7 +44,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.Location = new System.Drawing.Point(0, 282);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(584, 168);
+            this.groupBox1.Size = new System.Drawing.Size(592, 168);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Videos";
@@ -52,19 +52,21 @@
             // dtgVideos
             // 
             this.dtgVideos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgVideos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgVideos.Location = new System.Drawing.Point(35, 19);
             this.dtgVideos.Name = "dtgVideos";
-            this.dtgVideos.Size = new System.Drawing.Size(524, 150);
+            this.dtgVideos.Size = new System.Drawing.Size(532, 150);
             this.dtgVideos.TabIndex = 0;
             // 
             // Reproductor
             // 
+            this.Reproductor.AllowNavigation = false;
             this.Reproductor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Reproductor.Location = new System.Drawing.Point(0, 0);
             this.Reproductor.MinimumSize = new System.Drawing.Size(20, 20);
             this.Reproductor.Name = "Reproductor";
-            this.Reproductor.Size = new System.Drawing.Size(584, 282);
+            this.Reproductor.Size = new System.Drawing.Size(592, 282);
             this.Reproductor.TabIndex = 1;
             // 
             // pictureBox1
@@ -81,13 +83,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 450);
+            this.ClientSize = new System.Drawing.Size(592, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Reproductor);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserForm";
             this.Text = "Form1";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgVideos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

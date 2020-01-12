@@ -71,7 +71,7 @@ namespace AntiProcrastinate
         //metodo para mostrar por 3 segundos los videos que se agregaron
         private void ShowLabel(int agregados)
         {
-            lblAgregados.Text += " " + agregados.ToString()+ "Videos";
+            lblAgregados.Text += " " + agregados.ToString()+ " Videos";
             lblAgregados.Visible = true;
             TimerText.Start();
             ActLabels();
