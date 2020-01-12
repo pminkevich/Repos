@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiProcrastinate", "AntiProcrastinate\AntiProcrastinate.csproj", "{AB731B82-3BF5-458F-A6F0-CBCCB4170C52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB731B82-3BF5-458F-A6F0-CBCCB4170C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB731B82-3BF5-458F-A6F0-CBCCB4170C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB731B82-3BF5-458F-A6F0-CBCCB4170C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB731B82-3BF5-458F-A6F0-CBCCB4170C52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C7CCBC3-05D2-4D85-8273-1B37BC25BCA0}
+	EndGlobalSection
+EndGlobal
