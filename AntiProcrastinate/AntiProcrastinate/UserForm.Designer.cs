@@ -29,35 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtgVideos = new System.Windows.Forms.DataGridView();
             this.Reproductor = new System.Windows.Forms.WebBrowser();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVideos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dtgVideos);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 282);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(592, 168);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Videos";
-            // 
-            // dtgVideos
-            // 
-            this.dtgVideos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgVideos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVideos.Location = new System.Drawing.Point(35, 19);
-            this.dtgVideos.Name = "dtgVideos";
-            this.dtgVideos.Size = new System.Drawing.Size(532, 150);
-            this.dtgVideos.TabIndex = 0;
             // 
             // Reproductor
             // 
@@ -66,7 +41,7 @@
             this.Reproductor.Location = new System.Drawing.Point(0, 0);
             this.Reproductor.MinimumSize = new System.Drawing.Size(20, 20);
             this.Reproductor.Name = "Reproductor";
-            this.Reproductor.Size = new System.Drawing.Size(592, 282);
+            this.Reproductor.Size = new System.Drawing.Size(592, 450);
             this.Reproductor.TabIndex = 1;
             // 
             // pictureBox1
@@ -87,24 +62,18 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Reproductor);
-            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserForm";
             this.Text = "Form1";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UserForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVideos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dtgVideos;
         private System.Windows.Forms.WebBrowser Reproductor;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

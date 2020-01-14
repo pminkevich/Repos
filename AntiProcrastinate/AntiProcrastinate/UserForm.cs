@@ -29,7 +29,7 @@ namespace AntiProcrastinate
         {
             
             formState.Maximize(this);
-            ConnectData();
+            //ConnectData(); //Metodo para llenar un datagrid
             Reproducir();
 
         }
@@ -52,10 +52,11 @@ namespace AntiProcrastinate
             /* No funciona el embeb tira error script
             Reproductor.Url = new System.Uri("https://www.youtube.com/embed/MwSLIXelGg0", System.UriKind.RelativeOrAbsolute);*/
         }
-
-        private void ConnectData()
-        {
-            dtgVideos.DataSource = ControlUser.ListaVideos();
-        }
+        
+        // Metodo para llenar un Datagrid con los videos para ver
+        //private void ConnectData()
+        //{
+        //    dtgVideos.DataSource = ControlUser.ListaVideos();
+        //}
     }
 }
