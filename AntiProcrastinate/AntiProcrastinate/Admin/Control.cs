@@ -34,7 +34,7 @@ namespace AntiProcrastinate.Admin
         private YouTubeAPI Get(string channel)
         {
             //url del Json
-            var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channel + "&maxResults=50&key=API KEY GOOGle");
+            var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channel + "&maxResults=50&key=API KEY YOUTUBE");
             //Vuelco el Json a YoutubeAPI
             YouTubeAPI obj = JsonConvert.DeserializeObject<YouTubeAPI>(json);
             return obj;
