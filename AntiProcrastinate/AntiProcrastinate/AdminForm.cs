@@ -50,10 +50,10 @@ namespace AntiProcrastinate
 
         }
         //BOTON PARA AGREGAR CANAR, :-)
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             string channel = txtChannel.Text;
-            int Agregados= AdminController.AgregarChannel(channel);
+            int Agregados= await AdminController.AgregarChannel(channel);
 
             if (Agregados == 0)
             {
@@ -73,6 +73,7 @@ namespace AntiProcrastinate
         {
             lblAgregados.Text += " " + agregados.ToString()+ " Videos";
             lblAgregados.Visible = true;
+            //txtChannel.Text = "Se agregaron " + agregados.ToString() +" Videos";
             TimerText.Start();
             ActLabels();
         }
@@ -161,6 +162,7 @@ namespace AntiProcrastinate
             
             lblAgregados.Text = "Se Agregaron";
             lblAgregados.Visible = false;
+            txtChannel.Text = "";
             TimerText.Stop();
        
 
