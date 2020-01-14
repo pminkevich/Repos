@@ -1,18 +1,13 @@
 ****Repositorio de proyectos******
 
--AntiProcrastine:
-Sistema de Control de Tiempos de Ocio y Aprendizaje
-(Entity Framework, API YOUTUBE)
-Estado: Trabajando en ello.
-
 -Sis Ventas : 
 Sistema de ventas 
-(CRUD SQLCommand)
+(CRUD a la vieja escuela)
 Estado: Terminado
 
 -Cumpleañeros:
  Programa para enviar mensajes a los cumpleañeros
-(CRUD SQLCommand)
+(CRUD a la vieja escuela)
 Estado:Abandonado
 
 -Login:
