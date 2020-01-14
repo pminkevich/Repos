@@ -34,7 +34,7 @@ namespace AntiProcrastinate.Admin
         private YouTubeAPI Get(string channel)
         {
             //url del Json
-            var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channel + "&maxResults=25&key=AIzaSyCdzXmTfns0XL5FMPGo9MugccXnd6EDnv0");
+            var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channel + "&maxResults=50&key=AIzaSyCdzXmTfns0XL5FMPGo9MugccXnd6EDnv0");
             //Vuelco el Json a YoutubeAPI
             YouTubeAPI obj = JsonConvert.DeserializeObject<YouTubeAPI>(json);
             return obj;
@@ -52,72 +52,7 @@ namespace AntiProcrastinate.Admin
             });
             return total;
 
-            ////url del Json
-            //var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channel + "&maxResults=25&key=AIzaSyCdzXmTfns0XL5FMPGo9MugccXnd6EDnv0");
-            ////Vuelco el Json a YoutubeAPI
-            //YouTubeAPI obj = JsonConvert.DeserializeObject<YouTubeAPI>(json);
-            //int total = ((ICollection)obj.items).Count;
-
-
-            //List<Model.Videos> Videos = new List<Model.Videos>();
-            //try
-            //{
-            //    using (Model.AntiProcrastineEntities db = new Model.AntiProcrastineEntities())
-            //    {
-            //        for (int i = 0; i < total; i++)
-            //        {
-
-            //            Model.Videos Video = new Model.Videos();
-
-            //            Video.Id_Video = obj.items[i].id.videoId;
-            //            Video.Nombre = obj.items[i].snippet.title;
-            //            Video.Url = "https://www.youtube.com/embed/" + obj.items[i].id.videoId;
-            //            Video.ESTADO = "Listo";
-            //            Videos.Add(Video);
-
-
-
-            //        }
-            //        if (total > 0)
-            //        {
-            //            db.Videos.AddRange(Videos);
-            //            // db.Entry(Videos).State = System.Data.Entity.EntityState.Added;
-            //            db.SaveChanges();
-            //        }
-            //        return total;
-
-            //    }
-            //}
-            ////cath para saber sobre error en Entity Framework
-            //catch (DbEntityValidationException ex)
-            //{
-            //    StringBuilder sb = new StringBuilder();
-
-            //    foreach (var failure in ex.EntityValidationErrors)
-            //    {
-            //        sb.AppendFormat("{0} failed validation\n", failure.Entry.Entity.GetType());
-            //        foreach (var error in failure.ValidationErrors)
-            //        {
-            //            sb.AppendFormat("- {0} : {1}", error.PropertyName, error.ErrorMessage);
-            //            sb.AppendLine();
-            //        }
-            //    }
-            //    return total;
-            //    throw new DbEntityValidationException(
-            //        "Entity Validation Failed - errors follow:\n" +
-            //        sb.ToString(), ex
-
-            //    ); // Add the original exception as the innerException
-
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    string Error = ex.Message;
-            //    return total;
-            //}
-
+            
         }
 
         private void GuardarChannel(YouTubeAPI obj,int total)
