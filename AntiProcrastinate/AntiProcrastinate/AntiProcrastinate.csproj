@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Admin\Ajuste.cs" />
     <Compile Include="Admin\Control.cs" />
+    <Compile Include="Admin\Videos.cs" />
     <Compile Include="Antip\JsonUtils.cs" />
     <Compile Include="AjusteForm.cs">
       <SubType>Form</SubType>

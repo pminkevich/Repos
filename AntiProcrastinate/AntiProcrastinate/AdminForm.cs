@@ -16,6 +16,7 @@ namespace AntiProcrastinate
     public partial class AdminForm : Form
     {
         private Admin.Control AdminController;
+        private Admin.Videos Videos;
         private string Estado;
         
 
@@ -23,6 +24,7 @@ namespace AntiProcrastinate
         {
             InitializeComponent();
             AdminController = new Admin.Control();
+            Videos = new Admin.Videos();
             AdminController.EventState += Control_ChangeState;
             
         }
@@ -53,7 +55,7 @@ namespace AntiProcrastinate
         private async void button1_Click(object sender, EventArgs e)
         {
             string channel = txtChannel.Text;
-            int Agregados= await AdminController.AgregarChannel(channel);
+            int Agregados= await Videos.AgregarChannel(channel);
 
             if (Agregados == 0)
             {
@@ -87,9 +89,9 @@ namespace AntiProcrastinate
         //Metodo para cargar los datos en los labels
         public void ActLabels()
         {
-            lblVistos.Text = AdminController.Vistos().ToString();
+            lblVistos.Text = Videos.Vistos().ToString();
             lblVistos.Visible = true;
-            lblVer.Text = AdminController.PorVer().ToString();
+            lblVer.Text = Videos.PorVer().ToString();
             lblVer.Visible = true;
         }
         
