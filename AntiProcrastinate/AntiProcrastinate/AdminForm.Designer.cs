@@ -200,9 +200,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(80, 35);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 18);
+            this.label10.Size = new System.Drawing.Size(81, 18);
             this.label10.TabIndex = 6;
-            this.label10.Text = "ID del Canal";
+            this.label10.Text = "Play List ID";
             // 
             // label3
             // 

@@ -51,11 +51,14 @@ namespace AntiProcrastinate
             }
 
         }
-        //BOTON PARA AGREGAR CANAR, :-)
+        //BOTON PARA AGREGAR CANAl, :-)
         private async void button1_Click(object sender, EventArgs e)
         {
             string channel = txtChannel.Text;
-            int Agregados= await Videos.AgregarChannel(channel);
+            //int Agregados= await Videos.AgregarChannel(channel);
+            txtChannel.Text = "Agregando...";
+            int Agregados = await Videos.AgregarPlayList(channel);
+            txtChannel.Text = "";
 
             if (Agregados == 0)
             {
@@ -170,5 +173,7 @@ namespace AntiProcrastinate
 
 
         }
+
+       
     }
 }
