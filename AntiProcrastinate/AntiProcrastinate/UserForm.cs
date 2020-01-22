@@ -28,7 +28,7 @@ namespace AntiProcrastinate
         {
             InitializeComponent();
             ControlUser = new User.User();
-             formState= new Windows.FormState();
+            formState= new Windows.FormState();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -37,6 +37,7 @@ namespace AntiProcrastinate
             //formState.Maximize(this);
 
             //ConnectData(); //Metodo para llenar un datagrid
+
             Video = ControlUser.FirstVideo();
             VideoYouTube = ControlUser.GetInfoVideo(Video);
             Tiempo = VideoYouTube.items[0].contentDetails.duration.ToString();
@@ -45,8 +46,11 @@ namespace AntiProcrastinate
             siempre aparece al frente */
             this.TopMost = false;
 
+            /*Llame al metodo para pasar a  formato de numeros
+             el tiempo de duración del video que da la Api*/
             TotalSeg = TotalSec(Tiempo);
 
+            //Panel Informativo del Video
             lblDesafio.Text = "Nuevo Desafio";
             lblComienza.Text = "Comienza en";
             lblTitulo.Text = Video.Nombre.ToString();
@@ -84,7 +88,8 @@ namespace AntiProcrastinate
         //{
         //    dtgVideos.DataSource = ControlUser.ListaVideos();
         //}
-
+        /*Metodo que pasa el tiempo que nos brinda la Api de 
+        YouTubeAPI */
         private int TotalSec(string Tiempo)
         {
             char[] lstTime = Tiempo.ToCharArray();
@@ -129,7 +134,7 @@ namespace AntiProcrastinate
             int TotalSeg = (Min * 60) + Seg;
             return TotalSeg;
         }
-
+        //Timer para mostrar el panel 3 segundos
         private void TimerPanel_Tick(object sender, EventArgs e)
         {
             int Num = Convert.ToInt32(lblSeg.Text);
@@ -146,7 +151,7 @@ namespace AntiProcrastinate
 
 
         }
-
+        //Timer para mostrar el panel del desafio Completado(3 Seg)
         private void TimerVideo_Tick(object sender, EventArgs e)
         {
             TotalSeg--;
