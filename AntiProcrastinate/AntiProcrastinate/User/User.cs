@@ -46,7 +46,7 @@ namespace AntiProcrastinate.User
 			{
 				using (Model.AntiProcrastineEntities db = new Model.AntiProcrastineEntities())
 				{
-					FVideo = db.Videos.First();
+					FVideo = db.Videos.First(x => x.ESTADO == "Listo");
 
 				}
 				return FVideo;
@@ -79,8 +79,11 @@ namespace AntiProcrastinate.User
 				using (Model.AntiProcrastineEntities db = new Model.AntiProcrastineEntities())
 				{
 					Video.ESTADO = "Visto";
-					db.Videos.Attach(Video);
-					db.Entry(Video).Property(x => x.ESTADO).IsModified = true;
+					
+					db.Entry(Video).State = System.Data.Entity.EntityState.Modified;
+					//db.Videos.Attach(Video);
+					
+					//db.Entry(Video).Property(x => x.ESTADO).IsModified = true;
 					//db.Videos.Where(x => x.Id_Video == Video.Id_Video).Update(x => x.Estado == "Visto");
 					//db.Entry(Video).State = System.Data.Entity.EntityState.Modified;
 					

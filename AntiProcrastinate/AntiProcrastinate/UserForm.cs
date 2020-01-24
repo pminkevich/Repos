@@ -38,6 +38,9 @@ namespace AntiProcrastinate
 
             //ConnectData(); //Metodo para llenar un datagrid
 
+            /*Busco el primer video de la cola y uso la Api para
+            conseguir la información del tiempo de duracion*/
+
             Video = ControlUser.FirstVideo();
             VideoYouTube = ControlUser.GetInfoVideo(Video);
             Tiempo = VideoYouTube.items[0].contentDetails.duration.ToString();
@@ -50,24 +53,29 @@ namespace AntiProcrastinate
              el tiempo de duración del video que da la Api*/
             TotalSeg = TotalSec(Tiempo);
 
+            //Abro panel de desafio
+            OpenPanel(TotalSeg);
+           //Reproduccion del video 
+            Reproducir(Video);
+
+        }
+        private void OpenPanel(int pSegundos)
+        {
             //Panel Informativo del Video
             lblDesafio.Text = "Nuevo Desafio";
             lblComienza.Text = "Comienza en";
             lblTitulo.Text = Video.Nombre.ToString();
-            int Min = TotalSeg / 60;
-            int Seg = TotalSeg % 60;
-            lblTiempo.Text = Min.ToString()+ ":" + Seg.ToString();
+            int Min = pSegundos / 60;
+            int Seg = pSegundos % 60;
+            lblTiempo.Text = Min.ToString() + ":" + Seg.ToString();
             panel1.Visible = true;
 
             // MessageBox.Show(TotalSeg.ToString());
             TimerPanel.Enabled = true;
             TimerPanel.Start();
 
-
-            
-            Reproducir(Video);
-
         }
+
         //Reproductor con WebBrowser
         private void Reproducir(Videos Video)
         {
