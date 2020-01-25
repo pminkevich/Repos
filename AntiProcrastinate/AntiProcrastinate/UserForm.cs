@@ -36,8 +36,18 @@ namespace AntiProcrastinate
             /*usar para maximizar y ocupar todo el ancho de la pantalla*/
             //formState.Maximize(this);
 
-            //ConnectData(); //Metodo para llenar un datagrid
+           
 
+            
+            /*para poder depurar sino la pantalla
+            siempre aparece al frente */
+            this.TopMost = false;
+
+            NewChallenge();
+
+        }
+        private void NewChallenge()
+        {
             /*Busco el primer video de la cola y uso la Api para
             conseguir la información del tiempo de duracion*/
 
@@ -45,19 +55,14 @@ namespace AntiProcrastinate
             VideoYouTube = ControlUser.GetInfoVideo(Video);
             Tiempo = VideoYouTube.items[0].contentDetails.duration.ToString();
 
-            /*para poder depurar sino la pantalla
-            siempre aparece al frente */
-            this.TopMost = false;
-
             /*Llame al metodo para pasar a  formato de numeros
-             el tiempo de duración del video que da la Api*/
+            el tiempo de duración del video que da la Api*/
             TotalSeg = TotalSec(Tiempo);
 
             //Abro panel de desafio
             OpenPanel(TotalSeg);
-           //Reproduccion del video 
+            //Reproduccion del video 
             Reproducir(Video);
-
         }
         private void OpenPanel(int pSegundos)
         {
@@ -88,14 +93,9 @@ namespace AntiProcrastinate
             /* No funciona el embeb tira error script
             Reproductor.Url = new System.Uri("https://www.youtube.com/embed/MwSLIXelGg0", System.UriKind.RelativeOrAbsolute);*/
         }
+              
 
         
-
-        // Metodo para llenar un Datagrid con los videos para ver
-        //private void ConnectData()
-        //{
-        //    dtgVideos.DataSource = ControlUser.ListaVideos();
-        //}
         /*Metodo que pasa el tiempo que nos brinda la Api de 
         YouTubeAPI */
         private int TotalSec(string Tiempo)

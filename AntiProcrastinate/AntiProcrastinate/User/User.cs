@@ -61,7 +61,7 @@ namespace AntiProcrastinate.User
 
 		public YoutubeUser GetInfoVideo(Model.Videos Video)
 		{
-			string ApiYouTube = "&key=Api YouTube";
+			string ApiYouTube = "&key=ApiYouTube";
 			/*esto es para una futura version que calcule en tiempo del video y pueda estar
              * reproduciendose hasta que finalice*/
 			var json = new WebClient().DownloadString("https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=" + Video.Id_Video.ToString() + ApiYouTube);
