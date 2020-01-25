@@ -49,6 +49,7 @@ namespace AntiProcrastinate
             //Boton Presionado
             ((Button)sender).BackColor = Color.Gray;
           //SetPreset(((Button)sender).Name.ToString());
+          //envia a ajuste el texto del boton 
             Ajuste.AdjModo(((Button)sender).Text);
         }
 

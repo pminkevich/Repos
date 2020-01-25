@@ -36,9 +36,6 @@ namespace AntiProcrastinate
             /*usar para maximizar y ocupar todo el ancho de la pantalla*/
             //formState.Maximize(this);
 
-           
-
-            
             /*para poder depurar sino la pantalla
             siempre aparece al frente */
             this.TopMost = false;
