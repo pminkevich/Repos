@@ -23,9 +23,12 @@ namespace AntiProcrastinate
             //Noti.Icon = new Icon($@"{Dir}\Imagenes\Logo.ico");
             Noti.Icon = new Icon(@"C:\Users\Aimara\source\repos\AntiProcrastinate\AntiProcrastinate\Imagenes\Logo.ico");
             Noti.Visible = true;
+            
+
+            LoadAP();
             Application.Run();
 
-            
+
         }
 
         private static ContextMenuStrip GetMenu()
@@ -48,6 +51,11 @@ namespace AntiProcrastinate
             UserForm FrmUser = new UserForm();
             FrmUser.Show();
             
+        }
+        private static void LoadAP()
+        {
+            AntiP AP = new AntiP();
+            //AP.Init();
         }
     }
 }
