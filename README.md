@@ -1,4 +1,7 @@
-****Repositorio de proyectos******
+****Repositorio de proyectos  ******
+-Callcenter Api 
+Api hecha en .Net Core 3.1 
+(Entity Framework)
 
 -AntiProcrastine
 Sistema de Control de Tiempo de Ocio y Aprendizaje
